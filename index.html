@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مرتضي عمر - خبرة ٣٥ سنة في الكهرباء والسباكة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #f8b400;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--dark-color) 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://placehold.co/1200x800/2c3e50/FFFFFF?text=مرتضي+عمر') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+        }
+        
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid var(--primary-color);
+            margin: 0 auto 1.5rem;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .profile-img i {
+            font-size: 5rem;
+            color: #aaa;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .experience {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .exp-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .exp-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--secondary-color);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        /* Services */
+        .services {
+            background-color: white;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-icon {
+            background: var(--secondary-color);
+            color: white;
+            font-size: 2.5rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .service-content {
+            padding: 1.5rem;
+        }
+        
+        .service-content h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--dark-color);
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.3s;
+            border: none;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        
+        .btn:hover {
+            background: #e09e00;
+            transform: translateY(-3px);
+        }
+        
+        /* About */
+        .about {
+            background: #f5f5f5;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: var(--secondary-color);
+            color: white;
+        }
+        
+        .testimonials .section-title h2 {
+            color: white;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .client-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .client-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #555;
+            margin-left: 1rem;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .client-img i {
+            font-size: 1.5rem;
+            color: #ddd;
+        }
+        
+        .client-details h4 {
+            margin-bottom: 0.2rem;
+        }
+        
+        .client-details p {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background: white;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 10px;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #999;
+        }
+        
+        .close-modal:hover {
+            color: #333;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                width: 100%;
+                background: var(--secondary-color);
+                padding: 1rem 0;
+                text-align: center;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 0.5rem 0;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .experience {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .hero {
+                padding: 6rem 0 2rem;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">مرتضي عمر</div>
+            <ul class="nav-links">
+                <li><a href="#home">الرئيسية</a></li>
+                <li><a href="#services">الخدمات</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#testimonials">آراء العملاء</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="profile-img">
+                <i class="fas fa-user"></i>
+            </div>
+            <h1>مرتضي عمر</h1>
+            <p>خبير في الكهرباء والسباكة مع أكثر من ٣٥ سنة من الخبرة، ومتخصص في تركيب الألواح الشمسية والمنظومات السكنية المنزلية لأكثر من ٣ سنوات.</p>
+            
+            <div class="experience">
+                <div class="exp-item">
+                    <h3>٣٥+ سنة</h3>
+                    <p>خبرة في الكهرباء والسباكة</p>
+                </div>
+                <div class="exp-item">
+                    <h3>٣+ سنوات</h3>
+                    <p>خبرة في الألواح الشمسية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>خدماتنا</h2>
+            </div>
+            
+            <div class="services-grid">
+                <!-- الكهرباء -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>خدمات الكهرباء</h3>
+                        <p>تقديم حلول كهربائية متكاملة للمنازل والمنشآت مع خبرة تزيد عن ٣٥ عاماً. نضمن لكم أعمالاً ذات جودة عالية وأسعار منافسة.</p>
+                        <button class="btn request-btn" data-service="الكهرباء">اطلب الخدمة</button>
+                    </div>
+                </div>
+                
+                <!-- السباكة -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-faucet"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>خدمات السباكة</h3>
+                        <p>حلول متكاملة لمشاكل السباكة المنزلية والتجارية، إصلاح التسريبات، تركيب الأدوات الصحية، مع ضمان الجودة والخبرة الطويلة.</p>
+                        <button class="btn request-btn" data-service="السباكة">اطلب الخدمة</button>
+                    </div>
+                </div>
+                
+                <!-- المنظومات الشمسية -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-solar-panel"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>المنظومات الشمسية</h3>
+                        <p>تركيب أنظمة الطاقة الشمسية للمنازل والمنشآت، توفير في فواتير الكهرباء، طاقة نظيفة ومستدامة، مع خبرة تزيد عن ٣ سنوات.</p>
+                        <button class="btn request-btn" data-service="المنظومات الشمسية">اطلب الخدمة</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>من نحن</h2>
+            </div>
+            
+            <div class="about-content">
+                <p>مرتضي عمر، حرفي محترف يمتلك خبرة تزيد عن ٣٥ سنة في مجال الكهرباء والسباكة. خلال مسيرته الطويلة، قام بتنفيذ مئات المشاريع بنجاح وكسب ثقة العملاء بفضل جودة العمل والاحترافية.</p>
+                <p>منذ أكثر من ٣ سنوات، توسع نطاق عمله ليشمل تركيب الأنظمة الشمسية للمنازل، حيث يساعد الأسر على توفير استهلاك الطاقة والاعتماد على مصادر نظيفة ومستدامة.</p>
+                <p>نحن نقدم خدماتنا في مختلف أنحاء السودان، ونفتخر بسمعة طيبة built على أساس الثقة والجودة والالتزام بمواعيد التسليم.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>آراء العملاء</h2>
+            </div>
+            
+            <div class="testimonials-grid">
+                <!-- testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="client-info">
+                        <div class="client-img">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="client-details">
+                            <h4>أحمد محمد</h4>
+                            <p>الخرطوم</p>
+                        </div>
+                    </div>
+                    <p>"تعاملت مع الأستاذ مرتضي لتركيب نظام شمسي لمنزلي، وكانت النتيجة ممتازة. احترافي ومتقن لعمله."</p>
+                </div>
+                
+                <!-- testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="client-info">
+                        <div class="client-img">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="client-details">
+                            <h4>فاطمة عثمان</h4>
+                            <p>أم درمان</p>
+                        </div>
+                    </div>
+                    <p>"قام الأستاذ مرتضي بإصلاح جميع مشاكل الكهرباء في منزلي، وعمله متقن وأنيق. أنصح بالتعامل معه."</p>
+                </div>
+                
+                <!-- testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="client-info">
+                        <div class="client-img">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="client-details">
+                            <h4>عمر عبد الله</h4>
+                            <p>بحري</p>
+                        </div>
+                    </div>
+                    <p>"خدمة سباكة ممتازة، تم إصلاح المشكلة في وقت قياسي وبأسعار معقولة. شكراً لكم على الجودة."</p>
+                </div>
+                
+                <!-- testimonial 4 -->
+                <div class="testimonial-card">
+                    <div class="client-info">
+                        <div class="client-img">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="client-details">
+                            <h4>سارة إبراهيم</h4>
+                            <p>وسط الخرطوم</p>
+                        </div>
+                    </div>
+                    <p>"نظام الطاقة الشمسية الذي قام الأستاذ مرتضي بتركيبه وفر لي أكثر من ٧٠٪ من فاتورة الكهرباء. شكراً لكم."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Request Service Modal -->
+    <div class="modal" id="requestModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>طلب خدمة</h2>
+            <form id="requestForm">
+                <input type="hidden" id="serviceType" name="serviceType">
+                <div class="form-group">
+                    <label for="name">الاسم بالكامل</label>
+                    <input type="text" id="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">العنوان</label>
+                    <input type="text" id="address" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف</label>
+                    <input type="tel" id="phone" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">الرسالة (وصف الخدمة المطلوبة)</label>
+                    <textarea id="message" class="form-control" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn">إرسال الطلب</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <p>مرتضي عمر - خبرة ٣٥ سنة في الكهرباء والسباكة</p>
+            <p>متخصص في تركيب الألواح الشمسية والمنظومات السكنية</p>
+            <p>الهاتف: 0912345678 | البريد الإلكتروني: murtada@example.com</p>
+            <p>جميع الحقوق محفوظة &copy; 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Request service modal
+        const requestButtons = document.querySelectorAll('.request-btn');
+        const modal = document.getElementById('requestModal');
+        const closeModal = document.querySelector('.close-modal');
+        const serviceTypeInput = document.getElementById('serviceType');
+        
+        requestButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const serviceType = button.getAttribute('data-service');
+                serviceTypeInput.value = serviceType;
+                modal.style.display = 'flex';
+            });
+        });
+        
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+        
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+        
+        // Form submission
+        const requestForm = document.getElementById('requestForm');
+        
+        requestForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('شكراً لك على طلبك! سنتواصل معك في أقرب وقت.');
+            requestForm.reset();
+            modal.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
